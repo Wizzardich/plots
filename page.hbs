@@ -1,0 +1,12 @@
+{{!< default}}
+
+{{#post}}
+<div class="cr-page-content" data-cr-tags="{{#foreach tags}}{{name}}|{{/foreach}}">            
+    {{content}}
+</div>
+            {{#if tags}}
+            <div class="cr-page-content post-meta hidden">
+                <strong>tagged with: </strong>{{tags}}
+            </div>
+            {{/if}}
+{{/post}}

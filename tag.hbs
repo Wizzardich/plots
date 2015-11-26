@@ -1,0 +1,35 @@
+{{!< default}}
+<div class="cr-page-content">
+
+    <div class="post-list-header-title-nl">Posts tagged: {{tag.name}}</div>
+
+    <ol class="post-list">
+        {{#foreach posts}}
+            <li class="post-stub {{post_class}}" >
+        	<article class="large-12 medium-12 small-12 columns no-sp" id="post-{{id}}">
+            	    <div class="large-3 medium-4 small-12 columns no-sp">
+                	<header class="post-header">
+			   {{#if page}} 
+				<script>
+ 					console.log({{url}});
+				</script>
+			   {{/if}}
+                    	    <div class="cr-head-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD / MMMM / YYYY"}}</time></div>
+			   
+                    	    <div class="cr-author">by {{author.name}}</div>
+                	</header>
+            	    </div>
+            	    <div class="large-9 medium-8 small-12 columns no-sp">
+                    	<section class="large-12 medium-12 small-12 columns no-sp post-excerpt">
+                      	    <h3 class="post-title"><a href="{{url}}" class="cr-post-link">{{{title}}}</a></h3>
+                    	</section>
+            	    </div>
+            	</article>
+	    </li>
+        {{/foreach}}
+    </ol>
+
+    <div >
+        {{pagination}}
+    </div>
+</div>
