@@ -361,15 +361,25 @@ function parsePortfolioList(data, callback) {
 function addPlayerSelectorRow(set) {
     set.sort();
     
-    var checkboxBlock = '<table><tr>';
+    var checkboxBlock = "<div id='players'><table><tr>";
     for(var i = 0; i < set.length; i++) {
        var entry = set[i];
        var checkbox = "<td><input type='checkbox' name='" + entry + "' id=\"checkbox-" + i + "\" onclick=\"check(this)\" /><label for=\"checkbox-" + i + "\"></label><label for=\"checkbox-" + i + "\">" + entry + "\t</label></td>";
        checkboxBlock = checkboxBlock + checkbox;
     }
-    
-    checkboxBlock += '</tr></table>';
+
+    checkboxBlock += '</tr></table><hr></div>';
+    checkboxBlock += "<input type='image' id='hideshow' src='https://cdn4.iconfinder.com/data/icons/defaulticon/icons/png/256x256/arrow-down.png' alt='Hide/Show' align='right' width='25' height='25'>";
     $('.cr-portfolio-page').append(checkboxBlock);
+
+    $("#players").toggle();
+    $("#hideshow").click(function() {
+            $("#players").toggle();
+            if ($("#hideshow").attr('src') == 'https://cdn4.iconfinder.com/data/icons/defaulticon/icons/png/256x256/arrow-down.png')
+                $("#hideshow").attr('src', 'https://cdn4.iconfinder.com/data/icons/defaulticon/icons/png/256x256/arrow-up.png');
+            else
+                $("#hideshow").attr('src', 'https://cdn4.iconfinder.com/data/icons/defaulticon/icons/png/256x256/arrow-down.png');
+        });
 }
 
 function check(checkBox) {
