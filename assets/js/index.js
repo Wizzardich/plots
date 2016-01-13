@@ -361,15 +361,31 @@ function parsePortfolioList(data, callback) {
 function addPlayerSelectorRow(set) {
     set.sort();
     
-    var checkboxBlock = '<table><tr>';
+    var checkboxBlock = "<div id='players'><table><tr>";
     for(var i = 0; i < set.length; i++) {
        var entry = set[i];
        var checkbox = "<td><input type='checkbox' name='" + entry + "' id=\"checkbox-" + i + "\" onclick=\"check(this)\" /><label for=\"checkbox-" + i + "\"></label><label for=\"checkbox-" + i + "\">" + entry + "\t</label></td>";
        checkboxBlock = checkboxBlock + checkbox;
     }
-    
-    checkboxBlock += '</tr></table>';
+
+    checkboxBlock += '</tr></table><div style="width: 100%; height: 1px; background: #000; overflow: hidden;"/></div>';
+    checkboxBlock += "<input type='image' id='show' src='/assets/css/images/arrow-down.png' alt='' align='right' width='25' height='25'>";
+    checkboxBlock += "<input type='image' id='hide' src='/assets/css/images/arrow-up.png' alt='' align='right' width='25' height='25'>";
     $('.cr-portfolio-page').append(checkboxBlock);
+
+    $("#players").hide();
+    $("#hide").hide();
+
+    $("#hide").click(function() {
+            $("#players").slideUp('slow');
+            $("#hide").hide();
+            $("#show").show();
+        });
+    $("#show").click(function() {
+            $("#players").slideDown('slow');
+            $("#show").hide();
+            $("#hide").show();
+        });
 }
 
 function check(checkBox) {
