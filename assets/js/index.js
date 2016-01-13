@@ -368,17 +368,23 @@ function addPlayerSelectorRow(set) {
        checkboxBlock = checkboxBlock + checkbox;
     }
 
-    checkboxBlock += '</tr></table><hr></div>';
-    checkboxBlock += "<input type='image' id='hideshow' src='https://cdn4.iconfinder.com/data/icons/defaulticon/icons/png/256x256/arrow-down.png' alt='Hide/Show' align='right' width='25' height='25'>";
+    checkboxBlock += '</tr></table><div style="width: 100%; height: 1px; background: #000; overflow: hidden;"/></div>';
+    checkboxBlock += "<input type='image' id='show' src='/assets/css/images/arrow-down.png' alt='' align='right' width='25' height='25'>";
+    checkboxBlock += "<input type='image' id='hide' src='/assets/css/images/arrow-up.png' alt='' align='right' width='25' height='25'>";
     $('.cr-portfolio-page').append(checkboxBlock);
 
-    $("#players").toggle();
-    $("#hideshow").click(function() {
-            $("#players").toggle();
-            if ($("#hideshow").attr('src') == 'https://cdn4.iconfinder.com/data/icons/defaulticon/icons/png/256x256/arrow-down.png')
-                $("#hideshow").attr('src', 'https://cdn4.iconfinder.com/data/icons/defaulticon/icons/png/256x256/arrow-up.png');
-            else
-                $("#hideshow").attr('src', 'https://cdn4.iconfinder.com/data/icons/defaulticon/icons/png/256x256/arrow-down.png');
+    $("#players").hide();
+    $("#hide").hide();
+
+    $("#hide").click(function() {
+            $("#players").slideUp('slow');
+            $("#hide").hide();
+            $("#show").show();
+        });
+    $("#show").click(function() {
+            $("#players").slideDown('slow');
+            $("#show").hide();
+            $("#hide").show();
         });
 }
 
