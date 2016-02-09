@@ -1,0 +1,67 @@
+.hextape {
+    position: relative;
+    margin: 70px 0 50px -14px;
+}
+
+.hextape_base {
+    background: #2b2b2b;
+    margin: 14px 85px 0 281px;
+    height: 66px;
+}
+.hextape_base::before {
+    content: "";
+    background: url("/content/images/2016/01/--------------------.png") no-repeat;
+    display: block;
+    width: 281px;
+    height: 74px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.hextape_base::after {
+    content: "";
+    background: url("/content/images/2016/01/---------------------.png") no-repeat;
+    display: block;
+    width: 85px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    top: -14px;
+}
+
+.hextape_h {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+}
+
+._hextapeb {
+    margin: 70px 0 20px -14px;
+}
+
+.imgrfloat {
+    float: right;
+    margin: 10px 0 10px 20px;
+}
+
+._black {
+    color: #000;
+    font-weight: bold;
+}
+
+._gray {
+    color: #6d6e70;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.familiar {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid #2b2b2b;
+    border-radius: 30px;
+    margin: 30px 0 20px;
+}
