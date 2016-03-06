@@ -1,0 +1,57 @@
+#container {
+   width: 80%;
+   margin: auto;
+}
+#link-container {
+   width: 80%;
+   margin: auto;
+   margin-bottom: 20px;
+   text-align: center;
+}
+#link-container button {
+   width: 10%;
+   height: 90px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   vertical-align: middle;
+}
+
+#link-container textarea {
+   width: 60%;
+   height: 100px;
+   margin: auto;
+   vertical-align: top;
+   font-family: monospace;
+   display: inline-block;
+}
+
+.cell {
+   display: inline-block;
+   width: 23em;
+   max-width: 29vw;
+   overflow: hidden;
+}
+
+.link-info {
+   display: none;
+}
+
+.freewall_thumbnail {
+   cursor: pointer;
+}
+
+#link-wrapper {
+   position: relative;
+   width: 80vw;
+   left: calc(-40vw + 50%);
+   max-width: 80vw;
+}
+
+.pswp a {
+   color:white;
+}
+
+.footer-cleaner {
+   clear: both;
+   width: 100%;
+}

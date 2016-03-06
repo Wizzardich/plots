@@ -20,22 +20,15 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300'>
     <link rel='stylesheet' type='text/css' href='{{asset "css/fe.css"}}'>
+    <link rel="stylesheet" type='text/css' href="{{asset "css/photoswipe.css"}}"> 
+    <link rel="stylesheet" type='text/css' href="{{asset "default-skin/default-skin.css"}}"> 
+    <link rel="stylesheet" type='text/css' href="{{asset "css/gallery.css"}}">
+
+    
+
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
-    
-    <script>
-    
-        {{! settings for google account (set to null if not available" }}
-        var gAccount = null; 
-        if (gAccount) {
-            var _gaq =[["_setAccount",gAccount],["_trackPageview"]];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-            g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-            s.parentNode.insertBefore(g,s)}(document,"script"));
-        }
-    
-    </script>
     
 </head>
 <body class="{{body_class}}">
@@ -89,6 +82,11 @@
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/photoswipe.min.js"}}"></script> 
+    <script type="text/javascript" src="{{asset "js/photoswipe-ui-default.min.js"}}"></script> 
+    <script type="text/javascript" src="{{asset "js/bricks.js"}}"></script> 
+    <script type="text/javascript" src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/gallery.js"}}"></script>
     <img src="{{asset "css/icons/load/load.gif"}}" style="display: none" id="cr-p-load-img"/>
      
 </body>
