@@ -1,0 +1,3 @@
+[submodule "assets/linkviewer"]
+	path = assets/linkviewer
+	url = https://github.com/Wizzardich/linkviewer
