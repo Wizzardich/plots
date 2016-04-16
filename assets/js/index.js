@@ -759,6 +759,7 @@ function displayStaticPageElement(elToShow) {
 function displayLoadedStaticPage(url) {
     var $response = $('.cr-blogs').find('.cr-page-content');
     if ($response.length === 0) {
+        if ($('.cr-single-static-content').find('.cr-page-content').length != 0) return;
         console.log('404, static page was not found. The content of this page is not portfolio page.');
         return window.location.href = '/' + url;
     }

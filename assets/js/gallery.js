@@ -3,17 +3,22 @@ function initialize() {
    $("#container").removeData();
 
    var lines = $('#links').val().split('\n');
-   for(var i = 0;i < lines.length;i++){
-      for (key in linkmap) {
-         var re = RegExp(key);
-         if (re.test(lines[i])) {
-            linkmap[key](lines[i]);
+   for(var i = 0; i < lines.length; i++){
+      var line = re_weburl.exec(lines[i]);
+      if (line) {
+         line = line[0];
+         for (key in linkmap) {
+            var re = RegExp(key);
+            if (re.test(line)) {
+               linkmap[key](line);
+            }
          }
       }
    }   
-
-
 }
+
+var re_weburl = new RegExp("(https?:\/\/[^\\s]+)", "i");
+
 
 const linkmap = {
    ".*deviantart.com.*": 
@@ -33,7 +38,7 @@ const linkmap = {
             data.url = str;
             data.width = img.width;
             data.height = img.height;
-            data.title = img;
+            data.title = str;
             add(data, str);
          });
       }

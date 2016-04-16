@@ -1111,7 +1111,7 @@ button, .button {
   font-size: 1rem;
   /*     @else                            { font-size: $padding - rem-calc(2); } */ }
   button:hover, button:focus, .button:hover, .button:focus {
-    background-color: #b8b8b8; }
+    /*background-color: #b8b8b8;*/ }
   button:hover, button:focus, .button:hover, .button:focus {
     color: #333333; }
   button.secondary, .button.secondary {
