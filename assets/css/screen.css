@@ -229,8 +229,8 @@ blockquote cite {
 blockquote cite a { font-weight: normal; }
 
 mark {
-    background-color: #333;
-    color: #eee;
+    background-color: #ccc;
+    color: #000;
 }
 
 .night mark {
@@ -242,10 +242,10 @@ code, tt {
     padding: 1px 3px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.85em;
+    font-weight: bold;
     white-space: pre-wrap;
-    background: #eee;
     border-radius: 2px;
-    color: #333;
+    color: #444
 }
 
 .night code, .night tt {
