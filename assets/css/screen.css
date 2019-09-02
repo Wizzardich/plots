@@ -718,6 +718,33 @@ input[type=checkbox] {
     -o-transition: all .6s ease;
 }
 
+
+.cancelled {
+    -o-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    -webkit-transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -o-transition: all .6s ease;
+}
+
+.cancelled:hover {
+    -o-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    -webkit-transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -o-transition: all .6s ease;
+}
+
 .paused {
     -o-filter: sepia(100%);
     -moz-filter: sepia(100%);
